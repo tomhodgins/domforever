@@ -42,6 +42,16 @@ The `domforever` package is delivered in three different formats:
 
 You can `import` and `require()` these modules in your code with whatever bundler you prefer, or use the vanilla module or browser version in web browsers directly without bundling.
 
+There are also some example helper functions included in the [helpers.js](helpers.js), [helpers.vanilla.js](helpers.vanilla.js), and [helpers.browser.js](helpers.browser.js) files that show how functions can be written to help template using `tag()`.
+
+### Examples
+
+These pages don't have much other than DOM nodes being templated on them, but check out the source code to see how the DOM is being created:
+
+- Basic Website: [Live](https://tomhodgins.github.io/domforever/examples/website.html) [Source](examples/website.html)
+- JS Interpolation: [Live](https://tomhodgins.github.io/domforever/examples/js-interpolation.html) [Source](examples/js-interpolation.html)
+- Custom Helper Functions: [Live](https://tomhodgins.github.io/domforever/examples/helper-functions.html) [Source](examples/helper-functions.html)
+
 ## Similar Projects
 
 - [htmlforever](https://github.com/tomhodgins/htmlforever) HTML templating on the command-line with JS, Python & Ruby
