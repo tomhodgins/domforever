@@ -1,0 +1,33 @@
+{
+  "name": "domforever",
+  "version": "1.0.0",
+  "description": "DOM templating helper functions written in a Continuation-Passing Style",
+  "main": "index.js",
+  "module": "index.vanilla.js",
+  "directories": {
+    "test": "tests"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/tomhodgins/domforever.git"
+  },
+  "keywords": [
+    "html",
+    "dom",
+    "template",
+    "helper",
+    "partial",
+    "widget",
+    "component",
+    "module"
+  ],
+  "author": "Tommy Hodgins",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/tomhodgins/domforever/issues"
+  },
+  "homepage": "https://github.com/tomhodgins/domforever#readme"
+}

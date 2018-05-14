@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<meta charset=utf-8>
+<meta name=viewport content="width=device-width, initial-scale=1">
+<title>DOMforever Vanilla Test</title>
+<body>
+<script type=module>
+  import {tag, populate} from '../index.vanilla.js'
+  import {link, embed} from '../helpers.vanilla.js'
+
+  console.log(tag)
+
+  populate(document.body, [
+    tag('h1', {class: 'test'}, 'DOMforever Test'),
+    link('https://github.com/tomhodgins/domforever', 'DOMforever Homepage', 'Link to Github'),
+    embed('http://tomhodgins.com', '16', '9'),
+  ])
+</script>

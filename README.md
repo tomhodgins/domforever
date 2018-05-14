@@ -1,2 +1,3 @@
 # domforever
-DOMforever is a JavaScript-based HTML templating plugin
+
+DOM templating helper functions written in a Continuation-Passing Style

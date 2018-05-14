@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<meta charset=utf-8>
+<meta name=viewport content="width=device-width, initial-scale=1">
+<title>DOMforever Browser Test</title>
+<body>
+<script src=../index.browser.js></script>
+<script src=../helpers.browser.js></script>
+<script>
+  populate(document.body, [
+    tag('h1', {class: 'test'}, 'DOMforever Test'),
+    link('https://github.com/tomhodgins/domforever', 'DOMforever Homepage', 'Link to Github'),
+    embed('http://tomhodgins.com', '16', '9'),
+  ])
+</script>
