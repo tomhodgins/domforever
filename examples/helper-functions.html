@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<meta charset=utf-8>
+<meta name=viewport content="width=device-width, initial-scale=1">
+<title>DOM JS Interpolation</title>
+<script src=../index.browser.js></script>
+<script src=../helpers.browser.js></script>
+
+<body>
+
+<h1>Defining Custom Helper Functions</h1>
+
+<script>
+  populate(document.body, dummyContent())
+
+  function dummyHeadlines(rhs=[]) {
+
+    return [
+      tag("h1", [], "I'm an H1 Headline",
+        tag("h2", [], "I'm an H2 Headline",
+          tag("h3", [], "I'm an H3 Headline",
+            tag("h4", [], "I'm an H4 Headline",
+              tag("h5", [], "I'm an H5 Headline",
+                tag("h6", [], "I'm an H6 Headline")))))),
+      rhs
+    ]
+
+  }
+
+  function dummyLi(rhs=[]) {
+
+    return [
+      siblings("li", ["one", [{class: "target"}, "two"], "three"]),
+      rhs
+    ]
+
+  }
+
+  function dummyUl(rhs=[]) {
+
+    return [
+      tag("ul", [], dummyLi()),
+      rhs
+    ]
+
+  }
+
+  function dummyOl(rhs=[]) {
+
+    return [
+      tag("ol", [], dummyLi()),
+      rhs
+    ]
+
+  }
+
+  function lorem(rhs=[]) {
+
+    return [
+      tag("p", [], "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."),
+      rhs
+    ]
+
+  }
+
+  function loremIpsum(rhs=[]) {
+
+    return [
+      tag("p", [], "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate."),
+      rhs
+    ]
+
+  }
+
+  function loremIpsumDolor(rhs=[]) {
+
+    return [
+      tag("p", [], "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."),
+      rhs
+    ]
+
+  }
+
+  function lineBreak(rhs=[]) {
+
+    return [
+      tag('br', {}, ''),
+      rhs
+    ]
+
+  }
+
+  function dummyContent(rhs=[]) {
+
+    return [
+      dummyHeadlines(
+        lineBreak(
+          loremIpsumDolor(
+            lineBreak(
+              loremIpsum(
+                lineBreak(
+                  lorem(
+                    lineBreak(
+                     dummyUl(
+                       lineBreak(
+                         dummyOl())))))))))),
+      rhs
+    ]
+
+  }
+</script>

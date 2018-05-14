@@ -44,3 +44,16 @@ function embed(url='#', width='560', height='315', rhs=[]) {
   ]
 
 }
+
+function siblings(name='p', content=[], rhs=[]) {
+
+  return [
+    content.map(sibling =>
+      Array.isArray(sibling)
+      ? tag(name, sibling[0], sibling[1])
+      : tag(name, [], sibling)
+    ),
+    rhs
+  ]
+
+}

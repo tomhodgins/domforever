@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<script src=../index.browser.js></script>
+
+<body>
+
+<script>
+  populate(document.head, [
+
+    tag('meta', {charset: 'utf-8'}),
+
+    tag('title', {}, 'Example DOMforever Website'),
+
+    tag('meta', {
+      name: 'viewport',
+      content: 'width=device-width, initial-scale=1'
+    })
+
+  ])
+
+  populate(document.body, [
+
+    tag('header', {}, [
+
+      tag('a', {href: '/'}, 'LOGO'),
+
+      tag('nav', {}, [
+
+        tag('a', {href: '/'}, 'Home'),
+        tag('a', {href: '/about'}, 'About'),
+        tag('a', {href: '/contact'}, 'Contact'),
+
+      ])
+
+    ]),
+
+    tag('main', {}, [
+
+      tag('h1', {}, 'DOMforever Test'),
+
+      tag('article', {}, [
+
+        tag('h2', {}, 'Post Headline'),
+
+        tag('p', {}, 'Lorem ipsum dolor sit amet…')
+
+      ]),
+
+    ]),
+
+    tag('footer', {}, [
+
+      tag('p', {}, `© ${new Date().getFullYear()}`)
+
+    ])
+
+  ])
+</script>

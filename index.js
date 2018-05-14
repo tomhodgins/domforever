@@ -18,9 +18,11 @@ module.exports.populate = function(tag, content) {
 
       .reduce((acc, child) =>
 
-        Array.isArray(child)
-        ? acc.concat(flattenArray(child))
-        : acc.concat(child)
+        acc.concat(
+          Array.isArray(child)
+          ? flattenArray(child)
+          : child
+        )
 
       , [])
 

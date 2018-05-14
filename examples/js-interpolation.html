@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<meta charset=utf-8>
+<meta name=viewport content="width=device-width, initial-scale=1">
+<title>DOM JS Interpolation</title>
+<script src=../index.browser.js></script>
+
+<body>
+
+<h1>DOMforever JS Interpolation</h1>
+
+<input id=name placeholder="Type your name">
+
+<div id=output></div>
+
+<script>
+  document.querySelector('#name').addEventListener('input', e => {
+
+    const output = document.querySelector('#output')
+
+    output.innerHTML = ''
+    populate(output, tag('h2', {}, e.target.value))
+
+  })
+</script>
