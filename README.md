@@ -48,9 +48,9 @@ There are also some example helper functions included in the [helpers.js](helper
 
 These pages don't have much other than DOM nodes being templated on them, but check out the source code to see how the DOM is being created:
 
-- Basic Website: [Live](https://tomhodgins.github.io/domforever/examples/website.html) [Source](examples/website.html)
-- JS Interpolation: [Live](https://tomhodgins.github.io/domforever/examples/js-interpolation.html) [Source](examples/js-interpolation.html)
-- Custom Helper Functions: [Live](https://tomhodgins.github.io/domforever/examples/helper-functions.html) [Source](examples/helper-functions.html)
+- Basic Website: [Live](https://tomhodgins.github.io/domforever/examples/website.html) / [Source](examples/website.html)
+- JS Interpolation: [Live](https://tomhodgins.github.io/domforever/examples/js-interpolation.html) / [Source](examples/js-interpolation.html)
+- Custom Helper Functions: [Live](https://tomhodgins.github.io/domforever/examples/helper-functions.html) / [Source](examples/helper-functions.html)
 
 ## Similar Projects
 
