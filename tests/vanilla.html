@@ -5,7 +5,7 @@
 <body>
 <script type=module>
   import {tag, populate} from '../index.vanilla.js'
-  import {link, embed} from '../helpers.vanilla.js'
+  import {link, embed, siblings} from '../helpers.vanilla.js'
 
   console.log(tag)
 
@@ -13,5 +13,6 @@
     tag('h1', {class: 'test'}, 'DOMforever Test'),
     link('https://github.com/tomhodgins/domforever', 'DOMforever Homepage', 'Link to Github'),
     embed('http://tomhodgins.com', '16', '9'),
+    tag('ul', {}, siblings('li', ['one', [{class: 'test'}, 'two'], 'three']))
   ])
 </script>

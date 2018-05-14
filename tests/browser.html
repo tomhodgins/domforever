@@ -10,5 +10,6 @@
     tag('h1', {class: 'test'}, 'DOMforever Test'),
     link('https://github.com/tomhodgins/domforever', 'DOMforever Homepage', 'Link to Github'),
     embed('http://tomhodgins.com', '16', '9'),
+    tag('ul', {}, siblings('li', ['one', [{class: 'test'}, 'two'], 'three']))
   ])
 </script>
