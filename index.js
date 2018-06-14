@@ -12,9 +12,9 @@ module.exports.tag = function(name='div', attributes={}, content=[], rhs=[]) {
 
 module.exports.populate = function(tag, content) {
 
-  const flattenArray = content =>
+  const flattenArray = children =>
 
-    Array.from(content)
+    Array.from(children)
 
       .reduce((acc, child) =>
 

@@ -44,6 +44,79 @@ You can `import` and `require()` these modules in your code with whatever bundle
 
 There are also some example helper functions included in the [helpers.js](helpers.js), [helpers.vanilla.js](helpers.vanilla.js), and [helpers.browser.js](helpers.browser.js) files that show how functions can be written to help template using `tag()`.
 
+### Available Functions
+
+#### tag()
+
+```js
+tag(name, attributes, content, rhs)
+```
+
+- `name`: a string containing the tag name
+- `attributes`: an object containing key/value pairs for attributes you want to add to your tag
+- `content`: a string, DOM node
+- `rhs`: an (optional) array containing strings, nodes, or arrays
+
+Create an new HTML tag.
+
+#### populate()
+
+```js
+populate(tag, content)
+```
+
+- `tag`: a DOM node you wish to populate with content
+- `content`: a string or DOM node, or array containing any strings, DOM nodes, and arrays containing content you want to populate into the tag
+
+Populate content (nested as deeply as you like) into a DOM node.
+
+### Helper Functions
+
+#### link()
+
+```js
+link(url, text, title, rhs)
+```
+
+- `url`: a string containing the URL to link to
+- `text`: a string containing the text content of the link
+- `title`: a string containing the tooltip text for the link
+- `rhs`: an (optional) array containing strings, nodes, or arrays
+
+This helper function outputs an anchor tag with the corresponding information in a simpler way. Both the title, and the text will fall back to the text and/or url, so you can create a link with as little as one argument by only specifying the URL.
+
+#### embed()
+
+```js
+embed(url, width, height, rhs)
+```
+
+- `url`: a string containing the URL to link to
+- `width`: a number matching the original width of the embedded media
+- `height`: a number matching the original height of the embedded media
+- `rhs`: an (optional) array containing strings, nodes, or arrays
+
+Output a `div` element that contains an `iframe` element you want to make scalable while maintaining its aspect ratio.
+
+#### siblings()
+
+```js
+siblings(name, content, rhs)
+```
+
+- `name`: a string containing a `name` argument for `tag()` 
+- `content`: an array containing either content for that sibling, or an array containing an attributes object plus the content for that sibling
+- `rhs`: an (optional) array containing strings, nodes, or arrays
+
+Output multiple sibling elements with the same tag name.
+
+### Writing Custom Helper Functions
+
+JSTS files are similar to the 'JIC' stylesheets used by JS-in-CSS. for further reading about the flexibility of templating using JSTS you can also read:
+
+- [What is a JIC stylesheet](https://responsive.style/theory/what-is-a-jic-stylesheet.html)
+- [The .JIC format](https://responsive.style/theory/the-jic-format.html)
+
 ### Examples
 
 These pages don't have much other than DOM nodes being templated on them, but check out the source code to see how the DOM is being created:
